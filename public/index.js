@@ -1,38 +1,37 @@
-// ---
-const hamMenuBtn = document.querySelector('.header__main-ham-menu-cont')
-const smallMenu = document.querySelector('.header__sm-menu')
-const headerHamMenuBtn = document.querySelector('.header__main-ham-menu')
-const headerHamMenuCloseBtn = document.querySelector(
-  '.header__main-ham-menu-close'
-)
-const headerSmallMenuLinks = document.querySelectorAll('.header__sm-menu-link')
-
-hamMenuBtn.addEventListener('click', () => {
-  if (smallMenu.classList.contains('header__sm-menu--active')) {
-    smallMenu.classList.remove('header__sm-menu--active')
-  } else {
-    smallMenu.classList.add('header__sm-menu--active')
-  }
-  if (headerHamMenuBtn.classList.contains('d-none')) {
-    headerHamMenuBtn.classList.remove('d-none')
-    headerHamMenuCloseBtn.classList.add('d-none')
-  } else {
-    headerHamMenuBtn.classList.add('d-none')
-    headerHamMenuCloseBtn.classList.remove('d-none')
-  }
-})
-
-for (let i = 0; i < headerSmallMenuLinks.length; i++) {
-  headerSmallMenuLinks[i].addEventListener('click', () => {
-    smallMenu.classList.remove('header__sm-menu--active')
-    headerHamMenuBtn.classList.remove('d-none')
-    headerHamMenuCloseBtn.classList.add('d-none')
-  })
+// Sayfa yüklendiğinde tarayıcı geçmişine bir girdi ekleyerek URL'de görünen "#fragment" kısmını temizleyebiliriz.
+if (window.location.hash) {
+  history.replaceState(null, null, window.location.pathname);
 }
 
-// ---
-const headerLogoConatiner = document.querySelector('.header__logo-container')
+// Bağlantılara tıklandığında fragmenti gizlemek için JavaScript kullanma
+document.addEventListener('DOMContentLoaded', () => {
+  const links = document.querySelectorAll('a');
+  for (const link of links) {
+    link.addEventListener('click', (e) => {
+      e.preventDefault(); // Bağlantının varsayılan davranışını engelle
+      const targetId = link.getAttribute('href').slice(1); // "#" işaretini kaldır
+      const targetElement = document.getElementById(targetId);
 
-headerLogoConatiner.addEventListener('click', () => {
-  location.href = 'index.html'
-})
+      // Hedef elementi görünür yapın
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+
+      // Tarayıcı geçmişini güncellemeden önce bekleyin
+      setTimeout(() => {
+        // Tarayıcı URL'sini güncelleyin
+        history.pushState(null, null, `#${targetId}`);
+      }, 0);
+    });
+  }
+});
+
+// Header logosuna tıklama olayı
+const headerLogo = document.querySelector('.header__logo-link');
+headerLogo.addEventListener('click', (e) => {
+  e.preventDefault();
+  location.href = '#';
+  
+  // Sayfa yüklendiğinde tarayıcı geçmişine bir girdi ekleyerek URL'de görünen "#fragment" kısmını temizleyebiliriz.
+  if (window.location.hash) {
+    history.replaceState(null, null, window.location.pathname);
+  }
+});

@@ -9,33 +9,34 @@
   <meta name="description" content="Portfolio Template for Developer purposes only" />
   <base href="./">
   <link rel="stylesheet" href="./css/style.css" />
-
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="favicon_io/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
     rel="stylesheet" />
+
 </head>
-<script>
-  // Sayfa yüklendiğinde tarayıcı geçmişine bir girdi ekleyerek URL'de görünen "#fragment" kısmını temizleyebiliriz.
-  //if (window.location.hash) {
-    //history.replaceState(null, null, ' '); // Boş bir URL ile geçmişi güncelliyoruz.
-  //}
-</script>
+
+<script src="public/index.js"></script>
 
 <body>
   <header class="header">
     <div class="header__content">
       <div class="header__logo-container">
-        <a href="/" class="header__logo-link"></a>
+        <a href="#" class="header__logo-link"></a>
+
         <div class="header__logo-img-cont">
           <img src="./assets/png/Z6454w0.jpg" alt="Mustafa Avcı Logo" class="header__logo-img" />
         </div>
-        <span class="header__logo-sub">Mustafa Avcı</span>
+        <a href="#" span class="header__logo-sub">Mustafa Avcı</span>
       </div>
       <div class="header__main">
         <ul class="header__links">
           <li class="header__link-wrapper">
-            <a href="/" class="header__link">ANA SAYFA</a>
+            <a href="#home" class="header__link">ANA SAYFA</a>
           </li>
           <li class="header__link-wrapper">
             <a href="#about" class="header__link">HAKKIMDA </a>
@@ -60,7 +61,7 @@
       <div class="header__sm-menu-content">
         <ul class="header__sm-menu-links">
           <li class="header__sm-menu-link">
-            <a href="/"> Ana Sayfa </a>
+            <a href="#home"> Ana Sayfa </a>
           </li>
 
           <li class="header__sm-menu-link">
@@ -78,7 +79,7 @@
       </div>
     </div>
   </header>
-  <section class="home-hero">
+  <section id="home" class="home-hero">
     <div class="home-hero__content">
       <h1 class="heading-primary">Merhaba! Ben Mustafa Avcı</h1>
       <div class="home-hero__info">
@@ -305,7 +306,6 @@
     </div>
   </footer>
 
-  <script src="./index.js"></script>
 </body>
 
 </html>

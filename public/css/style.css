@@ -794,7 +794,7 @@ textarea {
 .main-footer__upper {
   display: flex;
   justify-content: space-between;
-  padding: 8rem 0;
+  padding: 2rem 0;
 }
 @media only screen and (max-width: 56.25em) {
   .main-footer__upper {
