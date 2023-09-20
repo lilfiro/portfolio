@@ -1,37 +1,26 @@
-// Sayfa yüklendiğinde tarayıcı geçmişine bir girdi ekleyerek URL'de görünen "#fragment" kısmını temizleyebiliriz.
-if (window.location.hash) {
-  history.replaceState(null, null, window.location.pathname);
-}
+const hamMenuBtn = document.querySelector('.header__main-ham-menu-cont')
+const smallMenu = document.querySelector('.header__sm-menu')
 
-// Bağlantılara tıklandığında fragmenti gizlemek için JavaScript kullanma
-document.addEventListener('DOMContentLoaded', () => {
-  const links = document.querySelectorAll('a');
-  for (const link of links) {
-    link.addEventListener('click', (e) => {
-      e.preventDefault(); // Bağlantının varsayılan davranışını engelle
-      const targetId = link.getAttribute('href').slice(1); // "#" işaretini kaldır
-      const targetElement = document.getElementById(targetId);
-
-      // Hedef elementi görünür yapın
-      targetElement.scrollIntoView({ behavior: 'smooth' });
-
-      // Tarayıcı geçmişini güncellemeden önce bekleyin
-      setTimeout(() => {
-        // Tarayıcı URL'sini güncelleyin
-        history.pushState(null, null, `#${targetId}`);
-      }, 0);
-    });
+hamMenuBtn.addEventListener('click', () => {
+  if (smallMenu.classList.contains('header__sm-menu--active')) {
+    smallMenu.classList.remove('header__sm-menu--active')
+  } else {
+    smallMenu.classList.add('header__sm-menu--active')
   }
 });
 
-// Header logosuna tıklama olayı
-const headerLogo = document.querySelector('.header__logo-link');
-headerLogo.addEventListener('click', (e) => {
-  e.preventDefault();
-  location.href = '#';
-  
-  // Sayfa yüklendiğinde tarayıcı geçmişine bir girdi ekleyerek URL'de görünen "#fragment" kısmını temizleyebiliriz.
-  if (window.location.hash) {
-    history.replaceState(null, null, window.location.pathname);
-  }
+const headerLogoContainer = document.querySelector('.header__logo-container');
+
+headerLogoContainer.addEventListener('click', (e) => {
+  e.preventDefault(); // Bağlantının varsayılan davranışını engelle
+
+  // Sayfanın en üstüne yavaşça kaydırma işlemi
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+headerLogoConatiner.addEventListener('click', () => {
+  location.href = 'index.html'
 });
