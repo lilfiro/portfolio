@@ -172,14 +172,14 @@ textarea {
 }
 
 .btn {
-  background: #fff;
-  color: #333;
+  background: #3f3f3f;
+  color: #ffdf6c;
   text-transform: uppercase;
   letter-spacing: 2px;
   display: inline-block;
   font-weight: 700;
   border-radius: 5px;
-  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 15px 0 #ffdf6c;
   transition: transform 0.3s;
 }
 .btn:hover {
@@ -195,7 +195,7 @@ textarea {
 }
 .btn--theme {
   background: #007031;
-  color: #fff;
+  color: #202020;
 }
 .btn--theme-inv {
   color: #007031;
@@ -206,7 +206,7 @@ textarea {
 }
 
 .sec-pad {
-  padding: 12rem 0;
+  padding: 12rem;
 }
 @media only screen and (max-width: 56.25em) {
   .sec-pad {
@@ -232,13 +232,9 @@ textarea {
 }
 
 .home-hero {
-  color: #fff;
-  background: linear-gradient(
-      to right,
-      rgba(0, 112, 49, 0.8),
-      rgba(0, 112, 49, 0.8)
-    ),
-    url(../../assets/svg/common-bg.svg);
+  color: #ffdf6c;
+background-color: #3f3f3f;
+background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
   background-position: center;
   height: 100vh;
   min-height: 80rem;
@@ -252,10 +248,12 @@ textarea {
   }
 }
 .home-hero__socials {
+  background:#3f3f3f;
   position: absolute;
   top: 50%;
-  border: 2px solid #eee;
-  border-left: 2px solid #eee;
+  border: 1px solid #202020;
+  border-left: 2px solid #202020;
+  box-shadow: 0 5px 15px 0 #ffdf6c;
   transform: translateY(-50%);
 }
 @media only screen and (max-width: 56.25em) {
@@ -281,7 +279,7 @@ textarea {
   width: 100%;
   display: block;
   padding: 1.2rem;
-  border-bottom: 2px solid #eee;
+  border-bottom: 2px ridge #202020;
   transition: background 0.3s;
 }
 .home-hero__social-icon-link:hover {
@@ -319,7 +317,7 @@ textarea {
 }
 
 .about {
-  background: #fafafa;
+  background: #f5f5f7;
 }
 .about__content {
   display: grid;
@@ -422,14 +420,9 @@ textarea {
 }
 
 .contact {
-  background: linear-gradient(
-      to right,
-      rgba(0, 112, 49, 0.8),
-      rgba(0, 112, 49, 0.8)
-    ),
-    url(../../assets/svg/common-bg.svg);
-  background-size: cover;
-  background-position: center;
+  color: #ffdf6c;
+background-color: #3f3f3f;
+background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
 }
 .contact__form-container {
   text-align: center;
@@ -648,11 +641,12 @@ textarea {
   z-index: 1000;
   background: #000;
   background: #fff;
-  box-shadow: 0 10px 100px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
 }
 .header__content {
   display: flex;
   align-items: center;
+  background-color: #202020;
   justify-content: space-between;
   padding: 1rem 5rem;
 }
@@ -696,8 +690,12 @@ textarea {
 .header__logo-sub {
   font-size: 1.8rem;
   text-transform: uppercase;
+  color: #707070;
   font-weight: 700;
   letter-spacing: 1px;
+}
+.header__logo-sub:hover {
+  color: #FFDF6C;
 }
 .header__links {
   display: flex;
@@ -711,14 +709,14 @@ textarea {
   padding: 2.2rem 3rem;
   display: inline-block;
   font-size: 1.6rem;
-  color: #333;
+  color: #707070;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 700;
   transition: color 0.3s;
 }
 .header__link:hover {
-  color: #007031;
+  color: #FFDF6C;
 }
 @media only screen and (max-width: 56.25em) {
   .header__link {
