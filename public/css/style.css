@@ -129,7 +129,7 @@ textarea {
   top: calc(100% + 1.5rem);
   height: 5px;
   width: 3rem;
-  background: #007031;
+  background: #202020;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 5px;
@@ -194,13 +194,13 @@ textarea {
   font-size: 1.6rem;
 }
 .btn--theme {
-  background: #007031;
-  color: #202020;
+  background: #202020;
+  color: #ffdf6c;
 }
 .btn--theme-inv {
-  color: #007031;
+  color: #202020;
   background: #fff;
-  border: 2px solid #007031;
+  border: 2px solid #202020;
   box-shadow: none;
   padding: calc(1.5rem - 2px) calc(5rem - 2px);
 }
@@ -233,8 +233,8 @@ textarea {
 
 .home-hero {
   color: #ffdf6c;
-background-color: #3f3f3f;
-background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
+  background-color: #3f3f3f;
+  background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
   background-position: center;
   height: 100vh;
   min-height: 80rem;
@@ -248,7 +248,7 @@ background-image: url("https://www.transparenttextures.com/patterns/inspiration-
   }
 }
 .home-hero__socials {
-  background:#3f3f3f;
+  background: #3f3f3f;
   position: absolute;
   top: 50%;
   border: 1px solid #202020;
@@ -421,8 +421,8 @@ background-image: url("https://www.transparenttextures.com/patterns/inspiration-
 
 .contact {
   color: #ffdf6c;
-background-color: #3f3f3f;
-background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
+  background-color: #3f3f3f;
+  background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
 }
 .contact__form-container {
   text-align: center;
@@ -663,7 +663,7 @@ background-image: url("https://www.transparenttextures.com/patterns/inspiration-
   transition: color 0.3s;
 }
 .header__logo-container:hover {
-  color: #007031;
+  color: #202020;
 }
 .header__logo-img-cont {
   width: 5rem;
@@ -671,7 +671,7 @@ background-image: url("https://www.transparenttextures.com/patterns/inspiration-
   border-radius: 50px;
   overflow: hidden;
   margin-right: 1.5rem;
-  background: #007031;
+  background: #202020;
 }
 @media only screen and (max-width: 56.25em) {
   .header__logo-img-cont {
@@ -695,7 +695,7 @@ background-image: url("https://www.transparenttextures.com/patterns/inspiration-
   letter-spacing: 1px;
 }
 .header__logo-sub:hover {
-  color: #FFDF6C;
+  color: #ffdf6c;
 }
 .header__links {
   display: flex;
@@ -716,7 +716,7 @@ background-image: url("https://www.transparenttextures.com/patterns/inspiration-
   transition: color 0.3s;
 }
 .header__link:hover {
-  color: #FFDF6C;
+  color: #ffdf6c;
 }
 @media only screen and (max-width: 56.25em) {
   .header__link {
@@ -782,8 +782,8 @@ background-image: url("https://www.transparenttextures.com/patterns/inspiration-
   border-bottom: 0;
 }
 .main-footer {
-  background: #000;
-  color: #fff;
+  background: #202020;
+  color: #f5f5f7;
 }
 .main-footer__upper {
   display: flex;
@@ -893,8 +893,8 @@ background-image: url("https://www.transparenttextures.com/patterns/inspiration-
 .contact__email-link {
   display: inline-block;
   padding: 2rem 4rem;
-  background: #007031;
-  color: #fff;
+  background: #202020;
+  color: #ffdf6c;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 700;
@@ -907,7 +907,6 @@ background-image: url("https://www.transparenttextures.com/patterns/inspiration-
 }
 
 .contact__email-link:hover {
-  background: #005620;
   transform: translateY(-3px);
 }
 
