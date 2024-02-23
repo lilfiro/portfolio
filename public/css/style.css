@@ -171,10 +171,6 @@ textarea {
   width: 92%;
 }
 
-.image-container {
-  position: relative;
-}
-
 .mlagents-gif {
   position: absolute;
   top: 50%;
