@@ -171,6 +171,17 @@ textarea {
   width: 92%;
 }
 
+.image-container {
+  position: relative;
+}
+
+.mlagents-gif {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .btn {
   background: #3f3f3f;
   color: #ffdf6c;
